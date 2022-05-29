@@ -7,12 +7,6 @@ python -m venv venv
 venv\Scripts\activate.bat
 
 ```
-API Routes
-```
-
-/register
-
-```
 
 Linux
 ```
@@ -36,7 +30,7 @@ set FLASK_DEBUG=1 #optional
 set SECRET_KEY=SECRET_KEY
 set MONGO_DB=MONGO_DB
 set MONGO_USERNAME=MONGO_USERNAME
-set MONGO_PASSOWORD=MONGO_PASSOWORD
+set MONGO_PASSWORD=MONGO_PASSWORD
 
 
 ```
