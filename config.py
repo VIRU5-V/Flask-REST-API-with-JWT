@@ -7,5 +7,5 @@ class Config:
     # db config
     MONGO_DB = os.environ.get('MONGO_DB')
     MONGO_USERNAME = os.environ.get('MONGO_USERNAME')
-    MONGO_PASSOWORD = os.environ.get('MONGO_PASSOWORD')
+    MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD')
     MONGO_URI = f"mongodb+srv://{MONGO_USERNAME}:{MONGO_PASSOWORD}@cluster0.8njfgac.mongodb.net/{MONGO_DB}?retryWrites=true&w=majority"
