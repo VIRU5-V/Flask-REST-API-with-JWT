@@ -7,7 +7,7 @@ from bson.objectid import ObjectId
 
 from ..app import mongodb
 from .decorators import token_required
-from .helpers import validate_email, to_json
+from .helpers import validate_email, to_json, valid_template_id
 
 api = Blueprint('api_blueprint', __name__)
 
@@ -101,8 +101,7 @@ def templates(current_user):
 @api.get('/template/<template_id>')
 @token_required
 def template(current_user, template_id):
-    len_tid = len(template_id)
-    if (len_tid > 24 or len_tid < 24):
+    if not valid_template_id(template_id):
         return jsonify({'error': 'Invalid template_id'}), 400 
     
     oid = ObjectId(template_id)
@@ -118,8 +117,7 @@ def template(current_user, template_id):
 @api.put('/template/<template_id>')
 @token_required
 def update_template(current_user, template_id):
-    len_tid = len(template_id)
-    if (len_tid > 24 or len_tid < 24):
+    if not valid_template_id(template_id):
         return jsonify({'error': 'Invalid template_id'}), 400 
 
     data = request.get_json()
@@ -148,8 +146,7 @@ def update_template(current_user, template_id):
 @api.delete('/template/<template_id>')
 @token_required
 def delete_template(current_user, template_id):
-    len_tid = len(template_id)
-    if (len_tid > 24 or len_tid < 24):
+    if not valid_template_id(template_id):
         return jsonify({'error': 'Invalid template_id'}), 400 
         
     oid = ObjectId(template_id)

@@ -22,3 +22,8 @@ def to_json(template):
             'author_id': author_id}
         
         return json
+
+def valid_template_id(template_id):
+    len_tid = len(template_id)
+    if (len_tid == 24): return True
+    return False
