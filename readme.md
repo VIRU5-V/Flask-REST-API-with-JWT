@@ -31,19 +31,22 @@ set SECRET_KEY=SECRET_KEY
 set MONGO_DB=MONGO_DB
 set MONGO_USERNAME=MONGO_USERNAME
 set MONGO_PASSWORD=MONGO_PASSWORD
-
+set MONGO_CLUSTER = your mongo cluster name
+set MONGO_CLUSTER_ID = your cluster id
 
 ```
 
 Linux
 ```
 
-set FLASK_APP=auth_app.py
-set FLASK_DEBUG=1 #optional
-set SECRET_KEY=SECRET_KEY
-set MONGO_DB=MONGO_DB
-set MONGO_USERNAME=MONGO_USERNAME
-set MONGO_PASSOWORD=MONGO_PASSOWORD
+export FLASK_APP=auth_app.py
+export FLASK_DEBUG=1 #optional
+export SECRET_KEY=SECRET_KEY
+export MONGO_DB=MONGO_DB
+export MONGO_USERNAME=MONGO_USERNAME
+export MONGO_PASSOWORD=MONGO_PASSOWORD
+export MONGO_CLUSTER = your mongo cluster name
+export MONGO_CLUSTER_ID = your cluster id
 
 ```
 
